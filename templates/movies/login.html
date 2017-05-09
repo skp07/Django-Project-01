@@ -1,0 +1,27 @@
+{% extends 'movies/base.html' %}
+
+{% block body %}
+
+<div class="col-sm-6" style="margin-top: 60px">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h1>Thank you for being with us </h1>
+
+            <h3>Log in</h3><br>
+
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <br><button type="submit" class="btn btn-success">Sign in </button>
+            </form>
+
+            <br>
+            <p> If you have not Registered yet you can <a href="{% url 'movies:signup' %}">Sign up</a> here</p>
+
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

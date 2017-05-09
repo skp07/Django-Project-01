@@ -1,0 +1,128 @@
+{% extends 'movies/base.html' %}
+{% block body %}
+
+        <div class="col-lg-10">
+            <div class="container-fluid" style="padding-top: 50px">
+                <div class="row">
+                    <div class="col-lg-11" style="border: 1px;height: 500px;border-radius: 20px;
+                    margin:9px;background-color: white;">
+                        <div class="col-lg-5" style="width: 370px;height: 500px">
+                            <div class="thumbnail">
+                                <img width="100%" src="{{ movie.movie_poster }}" >
+                            </div>
+                        </div>
+
+                        <div class="col-lg-7">
+                            <h1>{{ movie.movie_title }}</h1>
+                            <h3>{{ movie.year }}</h3>
+                            <h3>{{ movie.genre }}</h3>
+                            <h4>Director : {{ movie.director }}</h4>
+                            <h4>Starring : {{ movie.starring }}</h4>
+                            <br>
+                            <h4>Info:</h4>
+                            <small>{{ movie.summary }}</small>
+                            <br>
+
+
+                            <h3>How much do you think this Movie worth</h3>
+                            <div class="stars">
+                              <form action="">
+                                <input class="star star-5" id="star-5" type="radio" name="star"/>
+                                <label class="star star-5" for="star-5"></label>
+                                <input class="star star-4" id="star-4" type="radio" name="star"/>
+                                <label class="star star-4" for="star-4"></label>
+                                <input class="star star-3" id="star-3" type="radio" name="star"/>
+                                <label class="star star-3" for="star-3"></label>
+                                <input class="star star-2" id="star-2" type="radio" name="star"/>
+                                <label class="star star-2" for="star-2"></label>
+                                <input class="star star-1" id="star-1" type="radio" name="star"/>
+                                <label class="star star-1" for="star-1"></label>
+                              </form>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                    <h1>Comments</h1>
+
+           <a class="btn btn-primary" href="{% url 'movies:add_comment' movie.id %}">Add Comment</a>
+               <strong style="margin-left: 20px;">{{movie.comments.count}} Comments </strong>
+
+           {% for comment in movie.comments.all %}
+                <div style="margin:10px;padding-left:10px;height: auto;background-color: rgba(243,224,233,0.72)">
+
+                       <strong style="color: darkred">{{ comment.author }}</strong><br>
+                       <p>{{ comment.text|linebreaks }}</p>
+                <a href="{% url 'movies:delete_comment' comment.pk %}" class="del btn-sm">
+                    <span class="glyphicon glyphicon-trash"></span> delete
+                </a>
+                </div>
+               {% empty %}
+                <br>
+               <h5 style="color: white">No comments here yet</h5>
+           {% endfor %}
+            </div>
+        </div>
+
+        <div id='box' class="col-lg-1" style="margin-top: 60px;width: 190px;border: 1px;
+        background-color: lightgoldenrodyellow;border-radius: 15px;">
+            <ul>
+                <h4>Top movies from this Site</h4>
+                <li><a href="/movies/1/" class="active">Shawshank Redemption</a> </li>
+                <li><a href="/movies/3/">The Dark Knight</a> </li>
+                <li><a href="/movies/2/">Terminator</a> </li>
+                <li><a href="/movies/4/">Shrek</a> </li>
+                <li><a href="/movies/5/">Life is Beautiful</a> </li>
+                <li><a href="#">Saving Private Ryan</a> </li>
+                <li><a href="#">Mr Bean's Holiday</a> </li>
+                <li><a href="#">Die Hard 3</a> </li>
+            </ul>
+        </div>
+
+        <div class="col-lg-1" id="flip" style="margin-top: 30px;width: 190px;border: 2px solid lightgray;
+        background-color: lightblue;border-radius: 15px;">
+            <h4> Next Updates >>></h4>
+            </div>
+            <div class="col-lg-1" id="panel" style="width: 190px;border: 2px solid lightgray;
+            background-color: lightcyan;border-radius: 15px;display: none">
+            <ul>
+                <li>Justice League</li>
+                <li>Jason Bourne</li>
+                <li>Avatar 2</li>
+                <li>Spiderman</li>
+                <li>Dunkirk</li>
+                <li>Fate of The Furious</li>
+                <li>Baywatch</li>
+                <li>Despicable me 3</li>
+                <li>Cars 3</li>
+                <li>Pirates of the Caribbean</li>
+                <li>Spiderman</li>
+            </ul>
+        </div>
+
+        <div class="col-lg-1" id="flip" style="margin-top: 30px;width: 190px;border: 1px;
+        background-color:lightgreen;border-radius: 15px;">
+        <p><small>You can toggle the panel above to view upcoming updates</small> </p>
+
+        </div>
+
+        <footer class="container-fluid col-lg-12" style="background-color: black;margin-top: 60px;">
+            <p style="color: white">dream big</p></footer>
+
+
+
+    <!-- JQuery-->
+    <script>
+        $(document).ready(function () {
+                $('#flip').click(function () {
+                    $('#panel').slideToggle();
+                });
+        });
+
+
+    </script>
+
+{% endblock %}
