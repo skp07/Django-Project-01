@@ -4,7 +4,6 @@ from movies.forms import CommentForm
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-import operator
 from django.db.models import Q
 
 
