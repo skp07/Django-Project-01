@@ -5,18 +5,20 @@ The star rating framework is not fully functional yet as the one i found is brok
 a way to manually configured it.
 
 MovieDB is a movie database site to search,rate,discuss about your favorite movie
-![alt text](http://i.imgur.com/r6wgyi4.jpg)
-![alt text](http://i.imgur.com/Y9iSUKD.jpg)
+![Screenshot1](http://i.imgur.com/r6wgyi4.jpg)
 
-![alt text](http://i.imgur.com/fK7l427.jpg)
+Clean and Simple User Interface
+![Screenshot2](http://i.imgur.com/Y9iSUKD.jpg)
 
-![alt text](http://i.imgur.com/GzFF20s.jpg)
+![Screenshot3](http://i.imgur.com/fK7l427.jpg)
+
+![Screenshot4](http://i.imgur.com/GzFF20s.jpg)
 
 Comments sections which is just like a discussion forum
-![alt text](http://i.imgur.com/BmwoXUj.jpg)
+![Screenshot5](http://i.imgur.com/BmwoXUj.jpg)
 
 Search Engine which looks for all the possible attributes like movies, directors, genre, actors, years etc
-![alt text](http://i.imgur.com/wecZVs7.jpg)
+![Screenshot6](http://i.imgur.com/wecZVs7.jpg)
 
 A simple User Registration 
-![alt text](http://i.imgur.com/mRWpzZx.jpg)
+![Screenshot7](http://i.imgur.com/mRWpzZx.jpg)
