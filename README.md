@@ -3,7 +3,7 @@ This is a small movie database clone sample which is mostly focused on basic Use
 User Registration , authentication , login and log out , pagination , comments, search engine etc.
 The star rating framework is not fully functional yet as the one i found is broken so i have to find 
 a way to manually configured it.
-
+Here are screenshots of the website
 MovieDB is a movie database site to search,rate,discuss about your favorite movie
 ![Screenshot1](http://i.imgur.com/r6wgyi4.jpg)
 
